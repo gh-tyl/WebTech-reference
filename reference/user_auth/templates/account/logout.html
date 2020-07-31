@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% block title %}ログアウト{% endblock %}
+{% block contents %}
+<div class="container">
+   <div class="row">
+       <div class="my-div-style">
+           <h1>ログインアウト画面</h1>
+           <form method="post" action="{% url 'account_logout' %}">
+               {% csrf_token %}
+               <button class="btn btn-primary" type="submit">ログアウトする</button>
+           </form>
+       </div>
+   </div>
+</div>
+{% endblock %}
