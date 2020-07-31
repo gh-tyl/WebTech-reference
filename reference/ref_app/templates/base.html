@@ -31,7 +31,7 @@
                 <ul class="navbar-nav ml-auto">
                     {% if user.is_authenticated %}
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'account_logout' %}">ログイン中→Log Out</a>
+                            <a class="nav-link" href="{% url 'account_logout' %}">Log Out</a>
                         </li>
                     {% else %}
                         <li class="nav-item {% block active_signup %}{% endblock %}">
@@ -73,7 +73,7 @@
         <!-- Footer -->
         <footer class="py-5 bg-black">
             <div class="container">
-            <p class="m-0 text-center text-white small">&copy; MUDS 2020</p>
+            <p class="m-0 text-center text-white small">&copy; Tyler Inari 2020</p>
             </div>
             <!-- /.container -->
         </footer>

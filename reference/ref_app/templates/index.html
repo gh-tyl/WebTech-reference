@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 {% extends 'base.html' %}
 {% load static %}
-{% block title %}DjangoでWebアプリ開発{% endblock %}
+{% block title %}参考文献検索アプリ{% endblock %}
 {% block header%}
 <header class="masthead text-center text-white">
 <div class="masthead-content">
     <div class="container">
-        <h1 class="masthead-heading mb-0">My App</h1>
-        <h2 class="masthead-subheading mb-0">DjangoでWebアプリ</h2>
-        <a href="{% url 'account_logout' %}" class="btn btn-primary btn-xl rounded-pill mt-5">LOG OUT</a>
+        <h1 class="masthead-heading mb-0">Reference</h1>
+        <h2 class="masthead-subheading mb-0">参考文献検索アプリ</h2>
+        <a href="{% url 'ref_search:search' %}" class="btn btn-primary btn-xl rounded-pill mt-5">SEARCH</a>
+        <a href="#" class="btn btn-primary btn-xl rounded-pill mt-5">POST</a>
     </div>
 </div>
 <div class="bg-circle-1 bg-circle"></div>

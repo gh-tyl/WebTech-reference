@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}参考文献検索アプリ{% endblock %}
+{% block header%}
+<header class="masthead text-center text-white">
+<div class="masthead-content">
+    <div class="container">
+        <h2 class="masthead-subheading mb-0">検索</h2>
+    </div>
+</div>
+<div class="bg-circle-1 bg-circle"></div>
+<div class="bg-circle-2 bg-circle"></div>
+<div class="bg-circle-3 bg-circle"></div>
+<div class="bg-circle-4 bg-circle"></div>
+</header>
+{% endblock %}
+{% block contents %}
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+        <div class="card card-signin my-5">
+          <div class="card-body">
+            <h5 class="card-title text-center">SEARCH</h5>
+            <form class="form-signin">
+              <div class="form-label-group">
+                <label for="inputEmail">Title</label>
+                <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+              </div>
+
+              <div class="form-label-group">
+                <label for="inputPassword">Keyword</label>
+                <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+              </div>
+              <hr class="my-4">
+              <a href="#" class="btn btn-primary btn-xl rounded-pill mt-5">SEARCH</a>
+              <a href="{% url 'account_login' %}" class="btn btn-primary btn-xl rounded-pill mt-5">BACK</a>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

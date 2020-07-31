@@ -40,6 +40,7 @@ INSTALLED_APPS = [
 
     'ref_app.apps.RefAppConfig',
     'user_auth.apps.UserAuthConfig',
+    'ref_search.apps.RefSearchConfig',
 
     'django.contrib.sites',
     'allauth',
