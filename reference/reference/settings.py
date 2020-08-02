@@ -163,3 +163,5 @@ ACCOUNT_LOGOUT_REDIRECT_URL = 'account_login'
 
 #djangoにデフォルトユーザーモデルではなくMyUserTableモデルを参照させる
 AUTH_USER_MODEL = 'user_auth.MyUserTable'
+
+#REF_SEARCH_MODEL = 'ref_search.ReferenceData'
