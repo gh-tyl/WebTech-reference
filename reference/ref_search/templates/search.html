@@ -28,11 +28,12 @@
                     <label for="title">Title</label>
                     <input type="text" id="title" value="" class="form-control" placeholder="Title" required autofocus>
                 </div>
-
+                {% comment %}
                 <div class="form-label-group">
                     <label for="keyword">Keyword</label>
                     <input type="text" id="keyword" value="" class="form-control" placeholder="Keyword">
                 </div>
+                 {% endcomment %}
                 <hr class="my-4">
                 <a href="{% url 'account_login' %}" class="btn btn-primary btn-xl rounded-pill">BACK</a>
                 <a href="{% url 'ref_search:search_list' %}" class="btn btn-primary btn-xl rounded-pill">SEARCH</a>
