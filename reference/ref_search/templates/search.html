@@ -23,20 +23,22 @@
         <div class="card card-signin my-5">
           <div class="card-body">
             <h5 class="card-title text-center">SEARCH</h5>
-            <form class="form-signin">
-                <div class="form-label-group">
-                    <label for="title">Title</label>
-                    <input type="text" id="title" value="" class="form-control" placeholder="Title" required autofocus>
-                </div>
-                {% comment %}
-                <div class="form-label-group">
-                    <label for="keyword">Keyword</label>
-                    <input type="text" id="keyword" value="" class="form-control" placeholder="Keyword">
-                </div>
-                 {% endcomment %}
-                <hr class="my-4">
-                <a href="{% url 'account_login' %}" class="btn btn-primary btn-xl rounded-pill">BACK</a>
-                <a href="{% url 'ref_search:search_list' %}" class="btn btn-primary btn-xl rounded-pill">SEARCH</a>
+            <form action="/search_list/" method="post" class="form-signin">
+            {% csrf_token %}
+              <div class="form-label-group">
+                  <label for="title">Title</label>
+                  <input type="text" id="title" name="title" class="form-control" placeholder="Title" required autofocus>
+              </div>
+              {% comment %}
+              <div class="form-label-group">
+                  <label for="keyword">Keyword</label>
+                  <input type="text" id="keyword" value="" class="form-control" placeholder="Keyword">
+              </div>
+                {% endcomment %}
+              <hr class="my-4">
+              <a href="{% url 'account_login' %}" class="btn btn-primary btn-xl rounded-pill">BACK</a>
+              <input type="submit" value="Search" class="btn btn-primary btn-xl rounded-pill">
+              {% comment %} <a href="{% url 'ref_search:search_list' %}" type="submit" class="btn btn-primary btn-xl rounded-pill">SEARCH</a> {% endcomment %}
             </form>
           </div>
         </div>
