@@ -17,28 +17,33 @@
 {% endblock %}
 {% block contents %}
 <section>
-    <form method="post" action="">
-        <table class="table table-striped" border="1">
-            <thead>
-            <tr>
-                <th>title</th>
-                <th>url</th>
-            </tr>
-            </thead>
-            <tbody>
-            {% for message in messages %}
-                <tr>
-                <td>{{ message.message }}</td>
-                <td>{{ message.created_at }}</td>
-                </tr>
-            {% endfor %}
-            </tbody>
-        </table>
-    </form>
-    <div>
-        <hr>
-            <div><a href="{% url 'account_login' %}" class="btn btn-primary btn-xl rounded-pill mt-5">BACK</a></div>
-        <hr>
+<div class="container">
+    <div class="row">
+        <div class="mx-auto">
+            <form method="post" action="">
+                <table class="table table-striped" border="1">
+                    <thead>
+                    <tr>
+                        <th>title</th>
+                        {% comment %} <th>url</th> {% endcomment %}
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for reference in references %}
+                        <tr>
+                        <td><a href="{{ reference.url }}" target="_blank" rel="noopener noreferrer">{{ reference.title }}</a></td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </form>
+            <div>
+                <hr>
+                    <div><a href="{% url 'ref_search:search' %}" class="btn btn-primary btn-xl rounded-pill mt-5">BACK</a></div>
+                <hr>
+            </div>
+        </div>
     </div>
+</div>
 </section>
 {% endblock %}
