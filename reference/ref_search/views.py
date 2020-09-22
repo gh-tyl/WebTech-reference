@@ -30,4 +30,3 @@ def ListViewData(request, *args, **kwargs):
         'references':ReferenceData.objects.all().filter(title__contains=pre_title),
     }
     return render(request, "search_list.html", data)
-
