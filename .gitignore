@@ -1,0 +1,9 @@
+# MacOS
+.DS_Store
+
+# Development
+.vscode
+
+# Python
+__pycache__
+Pipfile.lock
